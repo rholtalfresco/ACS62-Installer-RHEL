@@ -28,10 +28,6 @@ solr_path=$alf_home/$alf_root/$solr_root # Path to where Solr's root is
 shared_loader_string="shared.loader=$tomcat_root/shared/classes,$tomcat_root/shared/lib/*.jar" # catalina.properties custom line.
 
 local_ip=$(ifconfig eth0 | sed -n 's/.*inet \([0-9.]\+\)\s.*/\1/p') # IP address for local computer
-java_version=$(java -version) # See if java is installed
-
-# Testing
-echo $java_version
 
 # This will be where the ACS root will be located
 cd $alf_home
@@ -53,15 +49,16 @@ mv apache-activemq-5* $amq_root
 
 # Unzip ASS
 unzip $installer_path/alfresco-search-services*
-if [ "alfresco-search-services" = "$solr_root" ]; then
+if [ "alfresco-search-services" != "$solr_root" ]; then
 	mv alfresco-search-services* $solr_root
 fi
 
-# Testing
-#if [ "-bash: java: command not found" = "$java_version" ]; then
-#	tar zxvf $installer_path/openjdk-11.*
-#	mv jdk-11.* jdk
-#	export PATH=$PATH:~/$alf_root/jdk/bin
+# Install java and configure it.
+#if [ "-bash: java: command not found" = "$java_version" ]; then # Commented for testing
+	tar zxvf $installer_path/openjdk-11.*
+	mv jdk-11.* jdk
+	export PATH=$PATH:$alf_path/jdk/bin
+	echo "export JAVA_HOME=$alf_path/jdk/"
 #fi
 
 # Make the extra folders and paths
