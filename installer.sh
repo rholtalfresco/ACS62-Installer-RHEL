@@ -18,8 +18,9 @@ alf_root=ACS62Testing # ACS root folder name
 tomcat_root=tomcat # Tomcat root folder name
 amq_root=activemq # activemq root folder name
 solr_root=alfresco-search-services # solr root folder name
+installer_root=installers # installer root foler name
 
-installer_path=$sh_dir/installers # Path to where the zips and other needed files are
+installer_path=$sh_dir/$installer_root # Path to where the zips and other needed files are
 alf_path=$alf_home/$alf_root # Path to where Alfresco's root is
 tomcat_path=$alf_home/$alf_root/$tomcat_root # Path to where Tomcat's root is
 amq_path=$alf_home/$alf_root/$amq_root # Path to where ActiveMQ's root is
@@ -57,19 +58,20 @@ fi
 #if [ "-bash: java: command not found" = "$java_version" ]; then # Commented for testing
 	tar zxvf $installer_path/openjdk-11.*
 	mv jdk-11.* jdk
-	export PATH=$PATH:$alf_path/jdk/bin
-	echo "export JAVA_HOME=$alf_path/jdk/"
+	echo "export PATH=$PATH:$alf_path/jdk/bin" >> ~/.bashrc
+	echo "export JAVA_HOME=$alf_path/jdk/" >> ~/.bashrc
+	source ~/.bashrc
 #fi
 
 # Make the extra folders and paths
 mkdir $alf_path/modules $alf_path/modules/share $alf_path/modules/platform $tomcat_path/shared $tomcat_path/shared/classes $tomcat_path/shared/lib
 
 sed -i "s~shared.loader=~$shared_loader_string~g" $tomcat_path/conf/catalina.properties
-cp -avr $installer_path/mysql-connector-java-5.1.48-bin.jar $tomcat_path/lib/
+#cp -avr $installer_path/mysql-connector-java-5.1.48-bin.jar $tomcat_path/lib/
 rm -rf $tomcat_path/webapps/*
 cp -avr $alf_path/web-server/webapps/* $tomcat_path/webapps/
 cp -avr $alf_path/web-server/conf/* $tomcat_path/conf/
-#cp -avr $alf_path/web-server/lib/* $tomcat_path/lib/
+cp -avr $alf_path/web-server/lib/* $tomcat_path/lib/
 cp -avr $alf_path/web-server/shared/classes/* $tomcat_path/shared/classes/
 mv $tomcat_path/shared/classes/alfresco-global.properties.sample $tomcat_path/shared/classes/alfresco-global.properties
 echo "" >> $tomcat_path/shared/classes/alfresco-global.properties
