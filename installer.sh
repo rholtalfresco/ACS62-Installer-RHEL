@@ -8,7 +8,7 @@
 ###############################################################################
 
 # Output all to log.
-bash | tee ~/ACSInstall.log  2>&1 
+exec >> alfresco-installer.log 2>&1 
 
 # Variables
 alf_home=~
