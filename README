@@ -1,0 +1,27 @@
+This installer is meant to provide a quick method of deployment for the Alfresco Service team.
+
+It is not to be used in a production environment or given out to customers. (at this time)
+
+The files needed are as follows:
+
+installer.sh
+installers
+	|
+	|->alfresco-content-services-distribution-6.2.0.zip
+	|-> alfresco-search-services-1.4.0.zip
+	|-> apache-activemq-5.15.8-bin.tar.gz
+	|-> apache-tomcat-8.5.43.tar.gz
+	|-> openjdk-11.0.1_linux-x64_bin.tar.gz
+	|-> alfresco-global.properties.standard (customized file)
+
+Assumptions:
+
+1. That you will have a working and ready BLANK DB and that you will edit the parts of alfresco-global.properties.standard and installer.sh to accomodate the db.
+2. That the system will be linux RHEL7 based.
+3. This sets up a non-SSL version of Alfresco.
+
+ToDos:
+
+1. The user needs to be able to interact even to just change names or directories without having to edit the code.
+2. The user should be able to see progress without having to tail the log script in another terminal.
+3. The user should be able to select which DB they want to use and the settings automatically need to be edited.

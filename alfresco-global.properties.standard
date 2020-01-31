@@ -1,0 +1,41 @@
+
+#
+# Set this property unless you have explicitly chosen to expose some repository APIs without authentication
+index.subsystem.name=solr6
+solr.secureComms=none
+solr.port=8983
+solr.host=${localname}
+
+#
+# Custom content and index data location
+#
+dir.root=/home/alfresco/ACS62Testing/alf_data
+dir.keystore=${dir.root}/keystore
+
+#
+# Sample database connection properties
+#
+db.username=alfresco
+db.password=alfresco
+
+#
+# Choose DB connection properties for your database, e.g. for PostgreSQL
+#
+db.driver=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://${db.host}:${db.port}/${db.name}?useUnicode=yes&characterEncoding=UTF-8 
+
+#
+# URL Generation Parameters (The ${localname} token is replaced by the local server name)
+#-------------
+alfresco.context=alfresco
+alfresco.host=${localname}
+alfresco.port=8080
+alfresco.protocol=http
+share.context=share
+share.host=${localname}
+share.port=8080
+share.protocol=http
+
+local.transform.service.enabled=false
+
+messaging.broker.url=failover:(tcp://server:61616)?timeout=3000
