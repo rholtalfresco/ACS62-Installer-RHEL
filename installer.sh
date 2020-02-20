@@ -5,12 +5,10 @@
 exec &> >(tee -a "alfresco-installer.log")
 
 # Color variables
-txtund=$(tput sgr 0 1)          # Underline
 txtbld=$(tput bold)             # Bold
 bldred=${txtbld}$(tput setaf 1) #  red
-bldgre=${txtbld}$(tput setaf 2) #  red
+bldgre=${txtbld}$(tput setaf 2) #  green
 bldblu=${txtbld}$(tput setaf 4) #  blue
-bldwht=${txtbld}$(tput setaf 7) #  white
 txtrst=$(tput sgr0)             # Reset
 warn=${bldred}"!!WARNING!!"${txtrst}
 
