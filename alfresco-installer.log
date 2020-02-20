@@ -1,0 +1,80 @@
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+ifconfig: interface eth0 does not exist
+unzip:  cannot find or open /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip, /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip.zip or /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip.ZIP.
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/apache-tomcat-8*'
+mv: rename apache-tomcat-8* to tomcat: No such file or directory
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/apache-activemq-5*'
+mv: rename apache-activemq-5* to activemq: No such file or directory
+cp: the -R and -r options may not be specified together.
+sed: 1: "/Users/loaner/ACS62Test ...": extra characters at the end of l command
+unzip:  cannot find or open /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*, /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*.zip or /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*.ZIP.
+
+No zipfiles found.
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/openjdk-11.*'
+mv: rename jdk-11.* to jdk: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/modules: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/share: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/platform: File exists
+mkdir: /Users/loaner/ACS62Testing/tomcat: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/tomcat/shared: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/tomcat/shared: No such file or directory
+cp: the -R and -r options may not be specified together.
+cp: the -R and -r options may not be specified together.
+cp: the -R and -r options may not be specified together.
+mv: rename /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties.sample to /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 137: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 138: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 139: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 141: cd: /Users/loaner/ACS62Testing/bin/: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 142: /Users/loaner/ACS62Testing/jdk/bin/java: No such file or directory
+sed: 1: "/Users/loaner/ACS62Test ...": extra characters at the end of l command
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 150: /Users/loaner/ACS62Testing/alfresco-search-services/solr/bin/solr: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 151: /Users/loaner/ACS62Testing/alfresco-search-services/solr/bin/solr: No such file or directory
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+ifconfig: interface eth0 does not exist
+mkdir: ACS62Testing: File exists
+unzip:  cannot find or open /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip, /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip.zip or /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-content-services-distribution-6.2.0.zip.ZIP.
+mkdir: /Users/loaner/ACS62Testing/modules: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/share: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/platform: File exists
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/apache-tomcat-8*'
+mv: rename apache-tomcat-8* to tomcat: No such file or directory
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/apache-activemq-5*'
+mv: rename apache-activemq-5* to activemq: No such file or directory
+cp: the -R and -r options may not be specified together.
+sed: 1: "/Users/loaner/ACS62Test ...": extra characters at the end of l command
+unzip:  cannot find or open /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*, /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*.zip or /Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/alfresco-search-services*.ZIP.
+
+No zipfiles found.
+tar: Error opening archive: Failed to open '/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installers/openjdk-11.*'
+mv: rename jdk-11.* to jdk: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/modules: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/share: File exists
+mkdir: /Users/loaner/ACS62Testing/modules/platform: File exists
+mkdir: /Users/loaner/ACS62Testing/tomcat: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/tomcat/shared: No such file or directory
+mkdir: /Users/loaner/ACS62Testing/tomcat/shared: No such file or directory
+cp: the -R and -r options may not be specified together.
+cp: the -R and -r options may not be specified together.
+cp: the -R and -r options may not be specified together.
+mv: rename /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties.sample to /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 137: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 138: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 139: /Users/loaner/ACS62Testing/tomcat/shared/classes/alfresco-global.properties: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 141: cd: /Users/loaner/ACS62Testing/bin/: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 142: /Users/loaner/ACS62Testing/jdk/bin/java: No such file or directory
+sed: 1: "/Users/loaner/ACS62Test ...": extra characters at the end of l command
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 150: /Users/loaner/ACS62Testing/alfresco-search-services/solr/bin/solr: No such file or directory
+/Users/loaner/Documents/GitHub/ACS62-Installer-RHEL/installer.sh: line 151: /Users/loaner/ACS62Testing/alfresco-search-services/solr/bin/solr: No such file or directory
