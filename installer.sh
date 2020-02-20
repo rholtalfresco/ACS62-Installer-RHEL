@@ -128,6 +128,7 @@ local_ip=$(ifconfig eth0 | sed -n 's/.*inet \([0-9.]\+\)\s.*/\1/p')
 
 #========================== Variables END =====================================
 
+#========================== End User Agreement ================================
 
 echogreen ""
 readgreen "Please accept the Alfresco End User Agreement to install"
@@ -140,6 +141,8 @@ while true; do
     * ) echored "You need to accept to continue";;
   esac
 done
+
+#========================== End User Agreement END ============================
 
 #========================== ACS Install =======================================
 
