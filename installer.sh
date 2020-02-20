@@ -12,10 +12,7 @@ bldgre=${txtbld}$(tput setaf 2) #  red
 bldblu=${txtbld}$(tput setaf 4) #  blue
 bldwht=${txtbld}$(tput setaf 7) #  white
 txtrst=$(tput sgr0)             # Reset
-info=${bldwht}*${txtrst}        # Feedback
-pass=${bldblu}*${txtrst}
-warn=${bldred}*${txtrst}
-ques=${bldblu}?${txtrst}
+warn=${bldred}"!!WARNING!!"${txtrst}
 
 echoblue () {
   echo "${bldblu}$1${txtrst}"
@@ -25,6 +22,28 @@ echogreen () {
 }
 echored () {
   echo "${bldred}$1${txtrst}"
+}
+readblue () {
+	read -p "${bldblu}$1${txtrst}" $2
+}
+readgreen () {
+	read -p "${bldgre}$1${txtrst}" $2
+}
+readred () {
+	read -p "${bldred}$1${txtrst}" $2
+}
+
+installJava () {
+	echogreen "Installing Java to $4"
+
+	cd $2
+	
+	# Install java and configure it.
+	tar zxf $1/openjdk-11.*
+	mv $2/jdk-11.* $2/$3
+	echo "export PATH=$PATH:$4/bin" >> ~/.bash_profile
+	echo "export JAVA_HOME=$4/" >> ~/.bash_profile
+	source ~/.bashrc
 }
 
 #========================== Initialization END ================================
@@ -41,7 +60,7 @@ echogreen "===================================================================="
 #========================== Variables =========================================
 
 while true; do
-  read -p "Where would you like to install Alfresco? [~]" alf_home
+  readblue "Where would you like to install Alfresco? [~]" alf_home
   case $alf_home in
   	"" ) alf_home=~; break;;
     * ) break;;
@@ -52,7 +71,7 @@ sh_dir=$(pwd)
 
 # Set root directory names
 while true; do
-  read -p "What is the ACS home folder name? [ACS]" alf_root
+  readblue "What is the ACS home folder name? [ACS]" alf_root
   case $alf_root in
   	"" ) alf_root=ACS; break;;
     * ) break;;
@@ -60,7 +79,7 @@ while true; do
 done
 
 while true; do
-  read -p "What is the Tomcat home folder name? [tomcat]" tomcat_root
+  readblue "What is the Tomcat home folder name? [tomcat]" tomcat_root
   case $tomcat_root in
   	"" ) tomcat_root=tomcat; break;;
     * ) break;;
@@ -68,7 +87,7 @@ while true; do
 done
 
 while true; do
-  read -p "What is the ActiveMQ home folder name? [activemq]" amq_root
+  readblue "What is the ActiveMQ home folder name? [activemq]" amq_root
   case $amq_root in
   	"" ) amq_root=activemq; break;;
     * ) break;;
@@ -76,7 +95,7 @@ while true; do
 done
 
 while true; do
-  read -p "What is the ASMS home folder name? [alfresco-search-services]" solr_root
+  readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
   case $solr_root in
   	"" ) solr_root=alfresco-search-services; break;;
     * ) break;;
@@ -84,7 +103,7 @@ while true; do
 done
 
 while true; do
-  read -p "What is the Java home folder name? [jdk]" java_root
+  readblue "What is the Java home folder name? [jdk]" java_root
   case $java_root in
   	"" ) java_root=jdk; break;;
     * ) break;;
@@ -184,14 +203,15 @@ sed -i "s/alfresco.secureComms=https/alfresco.secureComms=none/" $solr_path/solr
 
 #========================== Java Install ======================================
 
-echogreen "Installing Java to $java_path"
+if ![ -x "$(command -v java)" ]; then
 
-# Install java and configure it.
-tar zxf $installer_path/openjdk-11.*
-mv jdk-11.* 
-echo "export PATH=$PATH:$alf_path/jdk/bin" >> ~/.bashrc
-echo "export JAVA_HOME=$alf_path/jdk/" >> ~/.bashrc
-source ~/.bashrc
+	readred "${warn} Java not installed. Would you like to install Java? [y] ${warn}" yn
+
+    case $yn in
+    	"" | [Yy] ) installJava $installer_path $alf_path $java_root $java_path; break;;
+		[Nn] ) exit 1;;
+	esac
+fi
 
 #========================== Java END ==========================================
 
