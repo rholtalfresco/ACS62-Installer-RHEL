@@ -1,0 +1,356 @@
+Alfresco End User Agreement
+PLEASE READ THIS AGREEMENT CAREFULLY BEFORE PURCHASING AND/OR USING SOFTWARE OR SUPPORT FROM
+ALFRESCO. BY USING ALFRESCO SOFTWARE OR SUPPORT, USER ACCEPTS THIS AGREEMENT AND ACKNOWLEDGES IT
+HAS READ AND UNDERSTANDS THIS AGREEMENT. AN INDIVIDUAL ACTING ON BEHALF OF AN ENTITY REPRESENTS THAT
+HE OR SHE HAS THE AUTHORITY TO ENTER INTO THIS AGREEMENT ON BEHALF OF THAT ENTITY. IF USER DOES NOT
+ACCEPT THE TERMS OF THIS AGREEMENT, THEN IT MUST NOT USE ALFRESCO SOFTWARE OR SUPPORT.
+This Alfresco End User License Agreement (the "Agreement") is between Alfresco Software, Ltd., a United Kingdom limited company
+(“Alfresco”), and the individual or entity that accepts the terms of this Agreement ("User"). The effective date of this Agreement
+(“Effective Date”) is the earlier of the date that User formally accepts this Agreement or first uses Alfresco’s Software or Support. 
+1. SCOPE OF AGREEMENT
+1.1 Software and Support. This Agreement governs User’s
+use of Alfresco Software and, if applicable, Support. “Support”
+means Alfresco maintenance and support. "Software" means
+the software accompanying this Agreement and branded by
+Alfresco; provided, Software does not include third-party opensource software that may be provided therewith or Community
+Versions. “Community Versions” means the free, open-source
+community versions that Alfresco makes available at no charge,
+including without limitation Digital Business Platform, Alfresco
+Content Services, Alfresco Process Services and Records
+Management software. “Order Form” means the ordering
+documents placed by User. "Subscription" means access to the
+Software and, where applicable, Support for a defined period of
+time (the “Subscription Period”), as set forth in an Order Form.
+1.2. Business Partners. User is purchasing Software and
+Support from an Alfresco business partner (a "Business
+Partner"). Alfresco will provide the purchased Software and
+Support to User under the terms of this Agreement, but is not
+responsible for (a) the actions of Business Partners, (b) any
+additional obligations Business Partners may have to User, or (c)
+any non-Alfresco products or services that Business Partners
+supply to User.
+2. REPORTING AND RECORDS
+2.1 Reporting. User will notify Alfresco or the Business
+Partner promptly if User exceeds the number of Cores and/or
+authorized Named Users purchased under the applicable Order
+Form. In its notice, User will include the number of excess Cores
+and/or Named Users, and the date(s) on which the additional
+Cores were first used and/or the date User exceeded its licensed
+Named Users. Alfresco (or the Business Partner) will invoice
+User for the applicable fees and User will promptly pay such
+fees.
+2.2 Records Retention. User will maintain accurate records
+necessary to verify the number of Cores it uses and Named
+Users it authorizes. Upon Alfresco's written request, User will
+provide Alfresco such records within ten (10) business days.
+3. LICENSE AND OWNERSHIP
+3.1 Grant to User. Subject to User's compliance with this
+Agreement, Alfresco grants to User, during the Subscription
+Period: (a) a non-exclusive, non-transferable, non-sublicensable
+license to use, copy, test, and modify the Software solely for
+User's own internal use and limited to the number of Cores,
+Named Users, and/or Active Processes designated in the Order
+Form, as applicable; (b) the rights in the third party open-source
+software provided with the Software, which rights are set forth in
+the applicable third-party licenses; (c) for the term designated in 
+an Order Form, the right to receive Support; and (d) a license to
+use the Software on the number of Cores designated in the
+Order Form for backup and disaster-recovery testing purposes.
+“Cores” means physical computer processing cores or virtual
+Central Processing Units (vCPUs), sold by Alfresco in groups of
+four Cores. As licensed by Alfresco, an initial set of four Cores
+allows User to deploy the Software on up to four physical
+cores, or up to four vCPUs, on a single server instance. If User
+purchases eight or more Cores, User may deploy the Software
+on physical cores or vCPUs equal to the number of Cores it has
+purchased, without limitation as to the number of server
+instances upon which they can run. For example, if User
+purchases Alfresco Content Services (with eight Cores), User
+may deploy the Software on up to eight physical cores, or up to
+eight vCPUs, on any number of server instances. “Named User”
+means an individual who has been given a unique user name or
+identifier to access the Software, and who has accessed the
+Software at least one time. No more than one individual may use
+an issued user name or identifier, and the sharing of such
+credentials is expressly prohibited. “Active Process,” as used
+with purchases of Alfresco Process Services software, means a
+process instance within the Software that has not been
+completed, cancelled, or formally suspended. Processes that
+have been initiated—but which have not been completed,
+cancelled, or formally suspended, or which are in a “wait” state—
+shall constitute Active Processes regardless of the level of user
+or machine activity associated with those processes over time.
+3.2 Restrictions. User will not, directly or indirectly: (a)
+sublicense, resell, rent, lease, distribute, market, commercialize
+or otherwise transfer rights or usage to: (i) the Software, (ii) any
+modified version or derivative work of the Software created by
+the User or for the User, or (iii) Community Versions; (b) remove
+or alter any copyright, trademark or proprietary notice in the
+Software; (c) transfer, use or export the Software in violation of
+any laws or regulations of any government; (d) combine, call, link
+to, or otherwise use the Software in conjunction with any
+Community Version, or use any Support for Community Versions
+or for unlicensed Cores or Named Users; or (e) reverse engineer,
+decompile or modify any encrypted or encoded portion of the
+Software.
+3.3 Proprietary Rights. Alfresco and its licensors will own all
+right, title, and interest to the Software, Support, technology,
+information, code or software provided to User by Alfresco,
+including all copies or modifications made by Alfresco.
+3.4 ACS Specific Restriction Only. If User makes a new
+purchase of Alfresco Content Services (ACS) on or after
+September 1, 2017, the following restriction shall apply:
+The Alfresco Content Services (ACS) includes a workflow
+capability along with a predetermined set of document-review
+and approval workflows, and a set of predetermined 
+management-task functions. User may use and modify the
+predetermined workflows and management tasks that are
+provided with the ACS subscription. However, User may not use
+the workflow software to design, create or run other types of
+workflows, business processes and/or management tasks. A
+separate subscription for Alfresco Process Services (APS)
+software is required for any such uses.
+4. TERM AND TERMINATION
+4.1 Term and Termination of Agreement. This Agreement
+will remain in effect for the duration of any active Subscription
+Period. Upon termination of User’s Subscription Period, User’s
+use of the Software will be limited to read-only access.
+If User materially breaches the terms of this Agreement, and the
+breach is not cured (or curable) within thirty (30) days after
+written notice of the breach, then Alfresco may, upon written
+notice, to the breaching party, terminate this Agreement and
+User’s access to the Software and Support.
+4.2 Survival. If this Agreement is terminated for any reason,
+Sections 3.2, 3.3, 4.2, 5, 6.2, 7, 8 and 9 of this Agreement will
+survive termination.
+5. CONFIDENTIALITY
+5.1 Confidential Information.
+(a) Definition. In connection with this Agreement, either
+party (the “Recipient”) may obtain confidential and proprietary
+information (“Confidential Information”) from the other (the
+“Discloser”). Confidential Information may include, without
+limitation, information about systems designs, pricing, cost data,
+financial information, business, sales, and marketing plans,
+products, product roadmaps, service programs, trade secrets,
+know-how, inventions, techniques, processes, programs,
+schematics, software, and data. Confidential Information
+includes information designated in writing as confidential, and
+any information a reasonable person would understand to be
+confidential or proprietary under the circumstances of its
+disclosure.
+(b) Exclusions. “Confidential Information” does not include
+information that: (i) has been independently developed by or for
+the Recipient without access or reference to, or use of,
+Confidential Information; (ii) is lawfully received free of restriction
+from another source having the right to furnish such information;
+(iii) is or becomes lawfully in the public domain other than
+through a breach of this Agreement; (iv) was lawfully known by
+the Recipient prior to disclosure; (v) Discloser agrees in writing is
+free of such restrictions; or (vi) is generally disclosed by the
+Discloser to third parties without a duty of confidentiality.
+(c) Duties With Respect To Confidential Information. At all
+times during and after the term of this Agreement, Recipient shall
+keep Discloser’s Confidential Information confidential using the
+same degree of care that it uses to protect its own Confidential
+Information, but not less than a reasonable degree of care, and
+shall not disclose Discloser’s Confidential Information to a third
+party without the Discloser’s written consent, or use the
+Confidential Information for purposes other than the performance
+of this Agreement. Where disclosure is required by law, such
+disclosure shall not constitute a breach of this Agreement
+provided Recipient gives Discloser reasonable advance notice to 
+enable Discloser to seek appropriate protection of the
+Confidential Information.
+6. REPRESENTATIONS AND WARRANTIES
+6.1 General Representations and Warranties. Alfresco
+represents and warrants that: (a) it will use reasonable skill and
+care in providing contracted Support; (b) the Support will be
+performed in a professional and workmanlike manner by qualified
+personnel; (c) it has the authority to enter into this Agreement
+with User; and (d) Alfresco has taken commercially reasonable
+measures to ensure the Software does not, at the time of delivery
+to User, include malicious mechanisms or code designed to
+damage or corrupt the Software.
+6.2 Disclaimer of Warranty. EXCEPT AS EXPRESSLY
+PROVIDED IN SECTION 6.1, TO THE MAXIMUM EXTENT
+PERMITTED BY APPLICABLE LAW, THE SOFTWARE AND
+SUPPORT PROVIDED BY ALFRESCO ARE PROVIDED
+WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+IMPLIED WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT AND FITNESS FOR A PARTICULAR
+PURPOSE. ALFRESCO DOES NOT GUARANTEE THAT THE
+USE OF THE SOFTWARE OR SUPPORT WILL BE
+UNINTERRUPTED, ERROR FREE, OR THAT ALFRESCO WILL
+CORRECT ALL SOFTWARE ERRORS. FOR THE BREACH OF
+THE WARRANTIES SET FORTH IN SECTION 6.1, USER’S
+EXCLUSIVE REMEDY AND ALFRESCO’S ENTIRE LIABILITY
+WILL BE TO UNDERTAKE COMMERCIALLY REASONABLE
+EFFORTS TO REMEDY THE SUPPORT DEFICIENCY,
+SUPPLY A TEMPORARY FIX, OR MAKE AN EMERGENCY
+BYPASS. IF ALFRESCO CANNOT SUBSTANTIALLY
+CORRECT A BREACH IN A COMMERCIALLY REASONABLE
+MANNER, USER MAY TERMINATE THE RELEVANT
+SOFTWARE SUBSCRIPTION AND RECEIVE A PRO RATA
+REFUND OF FEES PAID FOR THE REMAINING
+SUBSCRIPTION PERIOD AS OF THE EFFECTIVE DATE OF
+THE TERMINATION.
+7. LIMITATION OF LIABILITY AND DISCLAIMER OF
+DAMAGES
+7.1 Disclaimer of Damages. NOTWITHSTANDING
+ANYTHING TO THE CONTRARY IN THIS AGREEMENT OR AN
+ORDER FORM, IN NO EVENT WILL EITHER PARTY OR ITS
+AFFILIATES BE LIABLE TO THE OTHER PARTY OR ITS
+AFFILIATES FOR DAMAGES OTHER THAN DIRECT
+DAMAGES, INCLUDING, WITHOUT LIMITATION: ANY
+INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL,
+EXEMPLARY OR PUNITIVE DAMAGES, WHETHER IN TORT,
+(INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE;
+OR ANY DAMAGES ARISING OUT OF OR IN CONNECTION
+WITH ANY MALFUNCTIONS, REGULATORY NONCOMPLIANCE, DELAYS, LOSS OF DATA, LOST PROFITS,
+LOST SAVINGS, INTERRUPTION OF SERVICE, LOSS OF
+BUSINESS OR ANTICIPATORY PROFITS, EVEN A PARTY OR
+ITS AFFILIATES HAS BEEN ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES. LIABILITY FOR THESE DAMAGES
+WILL BE LIMITED AND EXCLUDED EVEN IF ANY EXCLUSIVE
+REMEDY PROVIDED FOR IN THIS AGREEMENT FAILS OF
+ITS ESSENTIAL PURPOSE.
+7.2 Limitation of Liability. NEITHER PARTY’S (OR ITS
+AFFILIATES’) AGGREGATE AND CUMULATIVE LIABILITY 
+ARISING FROM OR RELATING TO THIS AGREEMENT,
+WHETHER IN CONTRACT, TORT, STATUTE OR OTHERWISE
+WILL EXCEED THE AMOUNTS PAID OR OWED TO
+ALFRESCO BY USER, EITHER DIRECTLY OR THROUGH A
+BUSINESS PARTNER, DURING THE TWELVE (12) MONTHS
+IMMEDIATELY PRECEDING THE FIRST EVENT GIVING RISE
+TO LIABILITY. NOTHING IN THIS AGREEMENT IS INTENDED
+TO EXCLUDE OR LIMIT EITHER PARTY’S LIABILITY FOR
+DEATH, PERSONAL INJURY, OR PROPERTY DAMAGE
+CAUSED BY NEGLIGENCE, OR FOR FRAUD. NOTHING IN
+THIS SECTION WILL LIMIT THE FEES OWED BY USER
+UNDER THIS AGREEMENT FOR SOFTWARE OR SUPPORT,
+OR FOR EXCEEDING THE SCOPE OF THE LICENSES
+GRANTED OR VIOLATING THE RESTRICTIONS IN SECTION
+3.
+8. INDEMNIFICATION
+8.1 Defense. If a third party initiates or threatens a legal
+action alleging that User’s use of the Software directly infringes
+the third party’s patent, copyright, trademark or misappropriates
+the third party’s trade secret rights (“Third Party Rights”) (such
+action, a “Claim”), then Alfresco will (a) promptly assume the
+defense of the Claim and (b) pay costs, damages and/or
+reasonable attorneys’ fees that are included in a final judgment
+against User (without right of appeal) or in a settlement approved
+by Alfresco that are attributable to User’s use of the Software;
+provided that User (i) is current in the payment of all applicable
+fees, or becomes current, prior to requesting indemnification, (ii)
+notifies Alfresco in writing of the Claim promptly after receipt of
+the Claim, (iii) provides Alfresco the right to control the defense of
+the Claim with counsel of its choice, and to settle such Claim at
+Alfresco’s sole discretion (unless the settlement requires
+payment by User or requires User to admit liability), and (iv)
+reasonably cooperates with Alfresco in the defense of the Claim.
+8.2 Injunctive Relief. If the Software becomes the subject of
+any actual or anticipated third party infringement claim, Alfresco
+may, at its sole option and expense, (i) procure for User the right
+to continue using the affected Software consistent with this
+Agreement, (ii) replace or modify the affected Software with
+functionally equivalent software that does not infringe, or, if either
+(i) or (ii) is not available on a basis that Alfresco finds
+commercially feasible, (iii) terminate the Agreement or applicable
+Order Form and refund any prepaid fees for all unused portions
+of the Subscription Period.
+8.3 Exclusions. Alfresco will have no liability for any Claim
+based upon (a) use of non-current versions of the Software when
+Alfresco has made newer, non-infringing versions available to the
+User; (b) altered versions of the Software (unless the specific
+alteration was made by or for Alfresco); (c) use, operation or
+combination of the applicable Software with non-Alfresco
+programs, data, equipment or documentation if such infringement
+would have been avoided but for such use, operation or
+combination; (d) Alfresco’s compliance with designs,
+specifications or instructions provided by User where those
+designs, specifications or instructions cause the infringement; (e)
+use by User after notice by Alfresco to discontinue use of all or a
+portion of the Software; or (f) third- party open-source software.
+This section constitutes the entire liability of Alfresco, and User’s
+sole and exclusive remedy, with respect to any third party claims
+of infringement or misappropriation of intellectual property rights.
+9. GENERAL
+9.1 Notices. Notices under this Agreement must be in writing
+and delivered: (a) if to Alfresco, to its Chief Financial Officer, with
+a copy to its General Counsel; (b) if to User, to its Chief Financial
+Officer or any individual identified in the Order Form. Notices will
+be deemed received when (1) delivered personally; or (2) upon
+confirmed delivery by a commercial express carrier.
+9.2 Compliance with Applicable Laws. Each party will
+comply with all applicable laws, including applicable export
+control restrictions. In order for Alfresco to provide Support to
+User, it may be necessary for Alfresco to share information with
+its Affiliates, Business Partners, and/or subcontractors, which
+may be located worldwide. In such event, Alfresco will comply
+with Section 5 of this Agreement and with applicable data privacy
+laws governing the transfer of that information.
+9.3 Entire Agreement. Except as otherwise provided in a
+signed agreement between the parties, this Agreement
+constitutes the exclusive and complete agreement between
+Alfresco and User with respect to User’s use of Alfresco Software
+and/or Support, and supersedes all prior oral or written
+discussions, agreements or understandings.
+9.4 Force Majeure. Force majeure events shall excuse the
+affected party (the "Non-Performing Party") from its obligations
+under this Agreement so long as the event and its effects
+continue. Force majeure events include, without limitation, Acts
+of God, natural disasters, war, riot, network attacks, acts of
+terrorism, fire, explosion, accident, sabotage, strikes, inability to
+obtain power, fuel, material or labor, or acts of any government.
+As soon as feasible, the Non-Performing Party shall notify the
+other party of (a) its best reasonable assessment of the nature
+and duration of the force majeure event, and (b) the steps it is
+taking to mitigate its effects. If the force majeure event prevents
+performance for more than sixty (60) consecutive days, and the
+parties have not agreed upon a revised basis for performance,
+then either party may immediately terminate the Agreement upon
+written notice.
+9.5 Severability/Waiver. If any provision of this Agreement is
+ruled invalid or unenforceable, the provision shall be severable
+from this Agreement so that the remaining provisions are
+unaffected. No waiver of any rights under this Agreement will
+constitute a subsequent waiver unless otherwise stated in writing.
+9.6 Dispute Resolution. English law shall govern all aspects
+of this Agreement. Any dispute arising from this Agreement shall
+be subject to the exclusive jurisdiction of courts located in
+England and Wales, without regard to their conflict-of-law
+principles or the United Nations Convention on Contracts for the
+International Sale of Goods.
+9.7 Headings. All headings contained in this Agreement are
+inserted for identification and convenience and will not be
+deemed part of this Agreement for purposes of interpretation.
+9.8 Amendment. This Agreement may not be amended or
+modified except in a writing signed by the parties, with specific
+reference to this Agreement.
+THE FOLLOWING APPLIES ONLY IF USER HAS PURCHASED DIRECT ALFRESCO SUPPORT
+Attachment 1
+(Alfresco Support)
+1. Alfresco Support Programs. Alfresco’s support offerings, service levels, and guidelines are set forth at
+http://www.alfresco.com/support/guidelines. If User has purchased support, User’s applicable support program(s) will be set forth in
+the Order Form.
+Alfresco support may be used only for User’s internal purposes. Use of Alfresco support on behalf of a third party that is not a
+party to the Agreement, or for Community Versions, is a material breach of the Agreement.
+2.1 Scope of Support. In using Alfresco support, User agrees it will: (a) provide Alfresco with sufficient information and resources
+to correct the applicable support issue; (b) install and operate the Software on an Alfresco-supported stack, as identified at
+http://www.alfresco.com/services/support/stacks/; (c) promptly install all service packs provided by Alfresco; and (d) procure, install and
+maintain all equipment, telephone lines, communication interfaces and other hardware necessary to operate the Software.
+User is responsible for reading the release notes and any other available documentation before installing or upgrading the
+Software, and for testing the Software before deploying it in a production environment. User should also backup its production systems
+on a regular basis and have those backups available if needed for support purposes. Alfresco is not obligated to provide support for the
+following: (a) Software that has been modified or damaged by User or a third party (unless at Alfresco’s direction); (b) issues caused by
+User’s negligence, hardware malfunction or other causes beyond the reasonable control of Alfresco; (c) issues caused by third party
+software not licensed through Alfresco or provided by Alfresco.
+2.2 Technical Support Contacts. Alfresco customer support will provide Support to the designated contacts, as identified in an
+Order Form (“Technical Support Contacts”). The Technical Support Contacts should have “read, write and execute” access to the
+necessary files, English language communication skills and relevant technical knowledge. User may modify its designated Technical
+Support Contacts at any time during the term of a Subscription by notifying Alfresco in writing and giving Alfresco five (5) business days
+to process the change. Technical Support Contacts will be the only interface to the Alfresco customer support center. It is
+recommended that the Technical Support Contacts obtain the applicable Software certification by attending the required Alfresco
+training courses. In an emergency, an Alfresco customer support engineer will respond to an issue for an unauthorized contact on an
+exception basis subject to later verification and involvement of a named Technical Support Contact.

@@ -37,7 +37,7 @@ installJava () {
 	echogreen "Installing Java to $4"
 
 	cd $2
-	
+
 	# Install java and configure it.
 	tar zxf $1/openjdk-11.*
 	mv $2/jdk-11.* $2/$3
@@ -127,6 +127,19 @@ shared_loader_string="shared.loader=$tomcat_root/shared/classes,$tomcat_root/sha
 local_ip=$(ifconfig eth0 | sed -n 's/.*inet \([0-9.]\+\)\s.*/\1/p') 
 
 #========================== Variables END =====================================
+
+
+echogreen ""
+readgreen "Please accept the Alfresco End User Agreement to install"
+echogreen ""
+cat $installer_path/AlfrescoEndUserAgreement.txt
+while true; do
+  readblue "Do you accept the Alfresco End User Agreement? [y]" yn
+  case $yn in
+  	"" | [Yy] ) break;;
+    * ) echored "You need to accept to continue";;
+  esac
+done
 
 #========================== ACS Install =======================================
 
