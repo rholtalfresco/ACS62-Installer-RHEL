@@ -32,16 +32,24 @@ readred () {
 }
 
 installJava () {
-	echogreen "Installing Java to $4"
+  readblue "What is the Java home folder name? [jdk]" java_root
+  case $java_root in
+    "" ) java_root=jdk; break;;
+    * ) break;;
+  esac
+
+  java_path=$2/$java_root      #Java
+
+	echogreen "Installing Java to $java_path"
 
 	cd $2
 
 	# Install java and configure it.
 	tar zxf $1/openjdk-11.*
-	mv $2/jdk-11.* $2/$3
-	echo "export PATH=$PATH:$4/bin" >> ~/.bash_profile
-	echo "export JAVA_HOME=$4/" >> ~/.bash_profile
-	source ~/.bashrc
+	mv $2/jdk-11.* $java_path
+	echo "export PATH=$PATH:$java_path/bin" >> ~/.bash_profile
+	echo "export JAVA_HOME=$java_path" >> ~/.bash_profile
+	source ~/.bash_profile
 }
 
 #========================== Initialization END ================================
@@ -57,56 +65,39 @@ echogreen "===================================================================="
 
 #========================== Variables =========================================
 
-while true; do
-  readblue "Where would you like to install Alfresco? [~]" alf_home
-  case $alf_home in
-  	"" ) alf_home=~; break;;
-    * ) break;;
-  esac
-done
+readblue "Where would you like to install Alfresco? [~]" alf_home
+case $alf_home in
+	"" ) alf_home=~; break;;
+  * ) break;;
+esac
 
 sh_dir=$(pwd)
 
 # Set root directory names
-while true; do
-  readblue "What is the ACS home folder name? [ACS]" alf_root
-  case $alf_root in
-  	"" ) alf_root=ACS; break;;
-    * ) break;;
-  esac
-done
 
-while true; do
-  readblue "What is the Tomcat home folder name? [tomcat]" tomcat_root
-  case $tomcat_root in
-  	"" ) tomcat_root=tomcat; break;;
-    * ) break;;
-  esac
-done
+readblue "What is the ACS home folder name? [ACS]" alf_root
+case $alf_root in
+	"" ) alf_root=ACS; break;;
+  * ) break;;
+esac
 
-while true; do
-  readblue "What is the ActiveMQ home folder name? [activemq]" amq_root
-  case $amq_root in
-  	"" ) amq_root=activemq; break;;
-    * ) break;;
-  esac
-done
+readblue "What is the Tomcat home folder name? [tomcat]" tomcat_root
+case $tomcat_root in
+	"" ) tomcat_root=tomcat; break;;
+  * ) break;;
+esac
 
-while true; do
-  readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
-  case $solr_root in
-  	"" ) solr_root=alfresco-search-services; break;;
-    * ) break;;
-  esac
-done
+readblue "What is the ActiveMQ home folder name? [activemq]" amq_root
+case $amq_root in
+	"" ) amq_root=activemq; break;;
+  * ) break;;
+esac
 
-while true; do
-  readblue "What is the Java home folder name? [jdk]" java_root
-  case $java_root in
-  	"" ) java_root=jdk; break;;
-    * ) break;;
-  esac
-done
+readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
+case $solr_root in
+	"" ) solr_root=alfresco-search-services; break;;
+  * ) break;;
+esac
 
 installer_root=installers            # Installer
 
@@ -116,7 +107,6 @@ tomcat_path=$alf_home/$alf_root/$tomcat_root  # Tomcat
 amq_path=$alf_home/$alf_root/$amq_root        # ActiveMQ
 solr_path=$alf_home/$alf_root/$solr_root      # Solr
 installer_path=$sh_dir/$installer_root        # Installer
-java_path=$alf_home/$alf_root/$java_root      #Java
 
 # catalina.properties custom line.
 shared_loader_string="shared.loader=$tomcat_root/shared/classes,$tomcat_root/shared/lib/*.jar" 
@@ -218,12 +208,11 @@ sed -i "s/alfresco.secureComms=https/alfresco.secureComms=none/" $solr_path/solr
 #========================== Java Install ======================================
 
 if ![ -x "$(command -v java)" ]; then
-
 	readred "${warn} Java not installed. Would you like to install Java? [y] ${warn}" yn
-
     case $yn in
-    	"" | [Yy] ) installJava $installer_path $alf_path $java_root $java_path; break;;
-		[Nn] ) exit 1;;
+    	"" | [Yy]* ) installJava $installer_path $alf_path ; break;;
+		[Nn]* ) exit 1;;
+    * ) echored "${warn} Please state Yes or No. Java is needed to run Alfresco. ${warn}";;
 	esac
 fi
 
