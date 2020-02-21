@@ -12,9 +12,6 @@ bldblu=${txtbld}$(tput setaf 4) #  blue
 txtrst=$(tput sgr0)             # Reset
 warn=${bldred}"!!WARNING!!"${txtrst}
 
-echoblue () {
-  echo "${bldblu}$1${txtrst}"
-}
 echogreen () {
   echo "${bldgre}$1${txtrst}"
 }
@@ -22,13 +19,13 @@ echored () {
   echo "${bldred}$1${txtrst}"
 }
 readblue () {
-	read -p "${bldblu}$1${txtrst}" $2
+  read -p "${bldblu}$1${txtrst}" $2
 }
 readgreen () {
-	read -p "${bldgre}$1${txtrst}" $2
+  read -p "${bldgre}$1${txtrst}" $2
 }
 readred () {
-	read -p "${bldred}$1${txtrst}" $2
+  read -p "${bldred}$1${txtrst}" $2
 }
 
 installJava () {
@@ -40,66 +37,72 @@ installJava () {
 
   java_path=$2/$java_root      #Java
 
-	echogreen "Installing Java to $java_path"
+  echogreen "Installing Java to $java_path"
 
-	cd $2
+  cd $2
 
-	# Install java and configure it.
-	tar zxf $1/openjdk-11.*
-	mv $2/jdk-11.* $java_path
-	echo "export PATH=$PATH:$java_path/bin" >> ~/.bash_profile
-	echo "export JAVA_HOME=$java_path" >> ~/.bash_profile
-	source ~/.bash_profile
+  # Install java and configure it.
+  tar zxf $1/openjdk-11.*
+  mv $2/jdk-11.* $java_path
+  echo "export PATH=$PATH:$java_path/bin" >> ~/.bash_profile
+  echo "export JAVA_HOME=$java_path" >> ~/.bash_profile
+  source ~/.bash_profile
 }
 
 #========================== Initialization END ================================
 
+#========================== Introduction ======================================
+
 echogreen "===================================================================="
 echogreen ""
 echogreen "Project:     Alfresco 6.2 Enterprise RHEL 7 Installer"
-echogreen "Company:		Alfresco"
-echogreen "Developer:	Richard Holt, Jr. (Chad)"
+echogreen "Company:    Alfresco"
+echogreen "Developer:  Richard Holt, Jr. (Chad)"
 echogreen "https://github.com/rholtalfresco/ACS62-Installer-RHEL"
 echogreen ""
 echogreen "===================================================================="
+echogreen ""
+echogreen "Thank you for choosing Alfresco 6.2!"
+echogreen ""
+
+#========================== Introduction END ==================================
 
 #========================== Variables =========================================
 
 readblue "Where would you like to install Alfresco? [~]" alf_home
 case $alf_home in
-	"" ) alf_home=~; break;;
+  "" ) alf_home=~; break;;
   * ) break;;
 esac
 
 sh_dir=$(pwd)
 
 # Set root directory names
-
 readblue "What is the ACS home folder name? [ACS]" alf_root
 case $alf_root in
-	"" ) alf_root=ACS; break;;
+  "" ) alf_root=ACS; break;;
   * ) break;;
 esac
 
 readblue "What is the Tomcat home folder name? [tomcat]" tomcat_root
 case $tomcat_root in
-	"" ) tomcat_root=tomcat; break;;
+  "" ) tomcat_root=tomcat; break;;
   * ) break;;
 esac
 
 readblue "What is the ActiveMQ home folder name? [activemq]" amq_root
 case $amq_root in
-	"" ) amq_root=activemq; break;;
+  "" ) amq_root=activemq; break;;
   * ) break;;
 esac
 
 readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
 case $solr_root in
-	"" ) solr_root=alfresco-search-services; break;;
+  "" ) solr_root=alfresco-search-services; break;;
   * ) break;;
 esac
 
-installer_root=installers            # Installer
+installer_root=installers           # Installer
 
 # Set paths to the root directories
 alf_path=$alf_home/$alf_root                  # ACS
@@ -125,7 +128,7 @@ cat $installer_path/AlfrescoEndUserAgreement.txt
 while true; do
   readblue "Do you accept the Alfresco End User Agreement? [y]" yn
   case $yn in
-  	"" | [Yy] ) break;;
+    "" | [Yy] ) break;;
     * ) echored "You need to accept to continue";;
   esac
 done
@@ -207,13 +210,17 @@ sed -i "s/alfresco.secureComms=https/alfresco.secureComms=none/" $solr_path/solr
 
 #========================== Java Install ======================================
 
+echogreen "Checking Java"
+
 if ![ -x "$(command -v java)" ]; then
-	readred "${warn} Java not installed. Would you like to install Java? [y] ${warn}" yn
+  while true; do
+    readred "${warn} Java not installed. Would you like to install Java? [y] ${warn}" yn
     case $yn in
-    	"" | [Yy]* ) installJava $installer_path $alf_path ; break;;
-		[Nn]* ) exit 1;;
-    * ) echored "${warn} Please state Yes or No. Java is needed to run Alfresco. ${warn}";;
-	esac
+      "" | [Yy]* ) installJava $installer_path $alf_path; break;;
+      [Nn]* ) exit 1;;
+      * ) echored "${warn} Please state Yes or No. Java is needed to run Alfresco. ${warn}";;
+    esac
+  done
 fi
 
 #========================== Java END ==========================================
@@ -221,6 +228,7 @@ fi
 #========================== Additional Configuration ==========================
 
 echogreen "Applying AMPs"
+
 cd $alf_path/bin/
 $alf_path/jdk/bin/java -jar alfresco-mmt.jar install $alf_path/amps/alfresco-share-services.amp $tomcat_path/webapps/alfresco.war
 
