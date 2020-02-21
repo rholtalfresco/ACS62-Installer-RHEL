@@ -96,26 +96,70 @@ case $amq_root in
   * ) break;;
 esac
 
-readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
-case $solr_root in
-  "" ) solr_root=alfresco-search-services; break;;
-  * ) break;;
-esac
+# TODO disabled for now as they are named fine.
+#readblue "What is the ASMS home folder name? [alfresco-search-services]" solr_root
+#case $solr_root in
+#  "" ) solr_root=alfresco-search-services; break;;
+#  * ) break;;
+#esac
 
+# TODO disabled for now as they are named fine.
+#readblue "What is the Alfresco PDF Renderer home folder name? [alfresco-pdf-renderer]" pdf_root
+#case $pdf_root in
+#  "" ) pdf_root=alfresco-pdf-renderer; break;;
+#  * ) break;;
+#esac
+
+solr_root=alfresco-search-services  # Solr
+pdf_root=alfresco-pdf-renderer      # PDF Renderer
 installer_root=installers           # Installer
 
 # Set paths to the root directories
 alf_path=$alf_home/$alf_root                  # ACS
-tomcat_path=$alf_home/$alf_root/$tomcat_root  # Tomcat
-amq_path=$alf_home/$alf_root/$amq_root        # ActiveMQ
-solr_path=$alf_home/$alf_root/$solr_root      # Solr
+tomcat_path=$alf_path/$tomcat_root            # Tomcat
+amq_path=$alf_path/$amq_root                  # ActiveMQ
+solr_path=$alf_path/$solr_root                # Solr
+pdf_path=$alf_path/$pdf_root                  # PDF Renderer
 installer_path=$sh_dir/$installer_root        # Installer
 
 # catalina.properties custom line.
 shared_loader_string="shared.loader=$tomcat_root/shared/classes,$tomcat_root/shared/lib/*.jar" 
 
 # IP address for local computer
-local_ip=$(ifconfig eth0 | sed -n 's/.*inet \([0-9.]\+\)\s.*/\1/p') 
+# TODO need to not assume eth0              
+#local_ip=$(ifconfig eth0 | sed -n 's/.*inet \([0-9.]\+\)\s.*/\1/p') 
+local_ip=localhost
+
+# Check if Internet is available
+echogreen "Checking for Internet Access"
+if ping -q -c 1 -W 1 google.com >/dev/null; then
+  inetup=1
+else
+  inetup=0
+  echored "Internet required to install LibreOffice and ImageMagick."
+  echored "Please connect to the internet and try again OR install these manually."
+  echored ""
+  readred "Do you wish to continue? [y]" yn
+  case $yn in
+    "" | [Yy] ) break;;
+    * ) exit 1;;
+  esac
+fi
+
+#check for EPEL
+echogreen "Checking for EPEL"
+if rpm -qa | grep epel >/dev/null; then
+  epel=1
+else
+  if inetup = 1; then
+    echogreen "Installing EPEL"
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  else
+    echored "Please install EPEL manually."
+  fi
+fi
+
+
 
 #========================== Variables END =====================================
 
@@ -224,6 +268,18 @@ if ![ -x "$(command -v java)" ]; then
 fi
 
 #========================== Java END ==========================================
+
+#========================== Alfresco PDF Renderer =============================
+
+tar zxf alf_path/alfresco-pdf-renderer/*-1.1-linux.tgz
+#mv alfresco-pdf-renderer* $pdf_root
+
+echo "" >> $tomcat_path/shared/classes/alfresco-global.properties
+echo "alfresco-pdf-renderer.root=$pdf_path" >> $tomcat_path/shared/classes/alfresco-global.properties
+echo "alfresco-pdf-renderer.exe=${alfresco-pdf-renderer.root}/alfresco-pdf-renderer" >> $tomcat_path/shared/classes/alfresco-global.properties
+echo "alfresco-pdf-renderer.url=http://localhost:8090/" >> $tomcat_path/shared/classes/alfresco-global.properties
+
+#========================== Alfresco PDF Renderer END =========================
 
 #========================== Additional Configuration ==========================
 
